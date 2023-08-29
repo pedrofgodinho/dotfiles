@@ -13,20 +13,27 @@ keep_sudo_alive() {
 keep_sudo_alive
 
 # Base and dependencies
-sudo pacman -S --needed --noconfirm base-devel neovim curl git zellij nushell 
+sudo pacman -S --needed --noconfirm base-devel neovim curl git unzip zellij nushell 
 
 # Tools
 sudo pacman -S --needed --noconfirm python python-pwntools ghidra gdb 
 
-#sudo pacman -S --needed base-devel
-#git clone https://aur.archlinux.org/paru.git
-#cd paru
-#makepkg -si
-#cd ..
-#rm -rf paru
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+cd ..
+rm -rf paru
 
 # Aur Tools
-paru -S --needed --noconfirm python-angr
+paru -S --needed --noconfirm python-angr volta-bin
+
+# Node
+volta install node
+volta setup
+
+# Lunar vim
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+
 
 # Install GEF
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
