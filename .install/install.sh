@@ -20,7 +20,8 @@ dotfiles stash
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 
-
+# 
+sudo pacman -Syu --noconfirm
 
 # Base and dependencies
 sudo pacman -S --needed --noconfirm base-devel neovim curl git unzip nushell rustup
@@ -30,7 +31,7 @@ rustup default stable
 sudo pacman -S --needed --noconfirm python python-pwntools ghidra gdb 
 
 # Ui
-sudo pacman -S alacritty
+sudo pacman -S --needed --noconfirm alacritty
 
 # Rust tools 
 cargo install --locked zellij
