@@ -14,7 +14,7 @@ keep_sudo_alive
 
 
 # Clone the repo
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.tdot --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 git clone --bare https://github.com/pedrofgodinho/dotfiles.git $HOME/.dotfiles
 dotfiles stash
 dotfiles checkout
