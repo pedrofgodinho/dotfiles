@@ -4,7 +4,7 @@
 keep_sudo_alive() {
     while true; do
         sudo -n true
-        sleep 600  # Refresh every 10 minutes
+        sleep 90  # Refresh every 90 seconds
         kill -0 $$ || exit
     done &
 }
