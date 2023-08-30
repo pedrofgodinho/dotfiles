@@ -16,7 +16,7 @@ keep_sudo_alive
 sudo pacman -Syu --noconfirm
 
 # Base and dependencies
-sudo pacman -S --needed --noconfirm base-devel neovim curl git unzip nushell rustup 
+sudo pacman -S --needed --noconfirm base-devel neovim curl git unzip nushell starship rustup xclip
 rustup default stable
 
 # Tools

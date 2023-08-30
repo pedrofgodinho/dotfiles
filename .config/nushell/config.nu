@@ -774,3 +774,5 @@ alias dotfiles = /usr/bin/git --git-dir $"($env.HOME)/.dotfiles/" --work-tree ($
 def pwntemplate [file_name] {
   cp ~/pwn/template.py $"./($file_name)"
 }
+
+use ~/.cache/starship/init.nu
