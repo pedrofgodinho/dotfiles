@@ -16,7 +16,7 @@ keep_sudo_alive
 sudo pacman -Syu --noconfirm
 
 # Base and dependencies
-sudo pacman -S --needed --noconfirm base-devel neovim curl git unzip nushell rustup
+sudo pacman -S --needed --noconfirm base-devel neovim curl git unzip nushell rustup python-neovim
 rustup default stable
 
 # Tools
@@ -42,8 +42,8 @@ volta install node
 volta setup
 source .bashrc
 
-# Lunar vim TODO automate: y n y
-LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+# Lunar vim 
+echo -e "y\nn\ny" | LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
 # Install GEF
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
