@@ -16,11 +16,11 @@ keep_sudo_alive
 sudo pacman -Syu --noconfirm
 
 # Base and dependencies
-sudo pacman -S --needed --noconfirm base-devel neovim curl git unzip nushell rustup python-neovim
+sudo pacman -S --needed --noconfirm base-devel neovim curl git unzip nushell rustup 
 rustup default stable
 
 # Tools
-sudo pacman -S --needed --noconfirm python python-pwntools ghidra gdb 
+sudo pacman -S --needed --noconfirm python python-pwntools python-neovim python-debugpy ghidra gdb 
 
 # Ui
 sudo pacman -S --needed --noconfirm alacritty
