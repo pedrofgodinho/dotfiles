@@ -20,7 +20,7 @@ dotfiles stash
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 
-# 
+# Update system
 sudo pacman -Syu --noconfirm
 
 # Base and dependencies
@@ -38,7 +38,7 @@ cargo install --locked zellij
 
 git clone https://aur.archlinux.org/paru.git
 cd paru
-makepkg -si
+makepkg -si --noconfirm
 cd ..
 rm -rf paru
 
