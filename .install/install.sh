@@ -12,14 +12,6 @@ keep_sudo_alive() {
 # Run the sudo keep-alive function in the background
 keep_sudo_alive
 
-
-# Clone the repo
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-git clone --bare https://github.com/pedrofgodinho/dotfiles.git $HOME/.dotfiles
-dotfiles stash
-dotfiles checkout
-dotfiles config --local status.showUntrackedFiles no
-
 # Update system
 sudo pacman -Syu --noconfirm
 
@@ -55,6 +47,13 @@ LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.
 
 # Install GEF
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
+
+# Clone the repo
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+git clone --bare https://github.com/pedrofgodinho/dotfiles.git $HOME/.dotfiles
+dotfiles stash
+dotfiles checkout
+dotfiles config --local status.showUntrackedFiles no
 
 kill %1
 
