@@ -16,11 +16,11 @@ keep_sudo_alive
 sudo pacman -Syu --noconfirm
 
 # Base and dependencies
-sudo pacman -S --needed --noconfirm base-devel neovim curl git unzip nushell starship rustup xclip
+sudo pacman -S --needed --noconfirm base-devel helix curl git unzip nushell starship rustup xclip
 rustup default stable
 
 # Tools
-sudo pacman -S --needed --noconfirm python python-pwntools python-neovim python-debugpy ghidra gdb 
+sudo pacman -S --needed --noconfirm python python-pwntools python-lsp-server ghidra gdb 
 
 # Ui
 sudo pacman -S --needed --noconfirm alacritty
@@ -36,14 +36,6 @@ rm -rf paru
 
 # Aur Tools
 paru -S --needed --noconfirm python-angr volta-bin 
-
-# Node
-volta install node
-volta setup
-source ~/.bashrc
-
-# Lunar vim 
-echo -e "y\nn\ny" | LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
 # Install GEF
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
