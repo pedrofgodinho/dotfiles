@@ -23,7 +23,7 @@ rustup default stable
 sudo pacman -S --needed --noconfirm python python-pwntools python-lsp-server ghidra gdb 
 
 # Ui
-sudo pacman -S --needed --noconfirm alacritty
+sudo pacman -S --needed --noconfirm kitty ttf-firacode-nerd
 
 # Rust tools 
 cargo install --locked zellij
