@@ -1,3 +1,5 @@
+theme = "catppuccin_mocha"
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
@@ -5,3 +7,4 @@ select = "underline"
 
 [keys.normal]
 a = ["ensure_selections_forward", "collapse_selection", "move_char_right", "insert_mode"]
+

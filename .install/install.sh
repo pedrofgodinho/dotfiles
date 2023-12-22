@@ -20,7 +20,7 @@ sudo pacman -S --needed --noconfirm base-devel helix curl git unzip nushell rust
 rustup default stable
 
 # Tools
-sudo pacman -S --needed --noconfirm python python-pwntools python-lsp-server ghidra gdb 
+sudo pacman -S --needed --noconfirm python python-pwntools python-lsp-server ghidra gdb one_gadget 
 
 # Ui
 sudo pacman -S --needed --noconfirm kitty ttf-firacode-nerd
