@@ -767,8 +767,6 @@ $env.config = {
     ]
 }
 
-$env.PATH = ($env.PATH | append $"($env.HOME)/.volta/bin" | append $"($env.HOME)/.cargo/bin")
-
 alias dotfiles = /usr/bin/git --git-dir $"($env.HOME)/.dotfiles/" --work-tree ($env.HOME)
 
 def pwntemplate [file_name] {
