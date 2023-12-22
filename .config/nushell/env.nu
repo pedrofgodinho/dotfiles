@@ -82,6 +82,3 @@ $env.NU_PLUGIN_DIRS = [
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 $env.PATH = ($env.PATH | append $"($env.HOME)/.cargo/bin")
 
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
-
