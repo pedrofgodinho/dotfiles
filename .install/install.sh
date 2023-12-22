@@ -35,7 +35,7 @@ cd ..
 rm -rf paru
 
 # Aur Tools
-paru -S --needed --noconfirm python-angr volta-bin 
+paru -S --needed --noconfirm python-angr
 
 # Install GEF
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
